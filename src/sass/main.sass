@@ -1,0 +1,204 @@
+$browser-context: 20 // Default
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels / $context}em
+
+$accentColor: #1a1a1a
+$mainColor: #fff
+
+@import url('https://fonts.googleapis.com/css?family=Raleway')
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display')
+
+*
+  box-sizing: border-box
+
+*, *:focus, *:hover
+  outline: none
+
+body
+  font-family: 'Raleway', sans-serif
+  font-size: 20px
+  line-height: 1
+  color: $mainColor
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+
+h3
+  margin: 0
+  font-family: 'Playfair Display', serif
+  color: #fff
+
+p
+  margin: 0
+
+a
+  color: $mainColor
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.hero
+  position: relative
+  background: url("../img/hero_grid.svg")
+  background-size: 100%
+
+  &__image
+    position: relative
+    margin-top: em(-76)
+    width: 100%
+    z-index: -10
+    
+
+  &__title
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 0
+    font: 300 em(28)/em(80, 28) 'Raleway', sans-serif
+    background-color: $accentColor
+    opacity: 0.9
+    text-align: center
+
+.logo
+  width: em(86.5)
+  height: em(26.5)
+
+.nav__logo
+  margin-left: em(92)
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  padding: em(24) 0
+  background-color: $accentColor
+
+  &__list
+    margin: 0 em(135) 0 0
+    padding: 0
+
+  &__item
+    float: left
+    margin-right: em(48)
+    &:last-child
+      margin-right: 0
+
+  &__link
+    font-size: em(20)
+
+.arrow
+  background: url("../img/arrow.svg") no-repeat
+  background-size: 100%
+
+.howItWorks
+  padding: 0 em(20)
+
+  & > h3
+    position: relative
+    margin: em(36, 36) 0 em(22, 36)
+    font-size: em(36)
+    text-align: center
+    color: $accentColor
+
+  &__arrow
+    position: absolute
+    left: 50%
+    bottom: -18px
+    transform: translateX(-50%)
+    width: em(28, 36)
+    height: em(13, 36)
+    cursor: pointer
+
+  & > p
+    margin-bottom: em(36, 22)
+    font-size: em(22)
+    text-align: center
+    color: $accentColor
+
+  &__item
+    position: relative
+    margin-bottom: em(28)
+    img
+      width: 100%
+  &__info
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 3px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    max-width: em(472)
+    padding: 0 em(45) 0 em(74)
+    background-color: $accentColor
+    opacity: 0.9
+
+    &-right
+      right: 0
+      left: auto
+      padding-right: em(98)
+
+    h3
+      margin-bottom: em(28, 48)
+      font-size: em(48)
+      font-weight: normal
+      letter-spacing: em(1, 48)
+
+    p
+      font-size: em(20)
+      line-height: em(24, 20)
+      letter-spacing: em(0.5, 20)
+
+/* Adaptive */
+@media screen and (min-width: 1900px)
+  body
+    font-size: 26px
+
+@media screen and (min-width: 1601px) and (max-width: 1899px)
+  body
+    font-size: 22px
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+  body
+    font-size: 17px
+
+@media screen and (max-width: 767px)
+  .howItWorks > h3
+    margin-bottom: em(30, 36)
+
+@media screen and (min-width: 565px) and (max-width: 767px)
+  body
+    font-size: 15px
+
+@media screen and (max-width: 564px)
+  body
+    font-size: 13px
+
+  .hero
+    &__title
+      font-size: 13px
+      line-height: 20px
+
+  .nav
+    padding-left: 15px
+    padding-right: 15px
+    &__logo
+      margin-left: 0
+    &__list
+      margin-right: 0
+
+
+  .howItWorks
+    &__info
+      bottom: 0
+      padding: 0 10px
+      h3
+        font-size: 25px
+
+    & > p
+      margin-top: 25px

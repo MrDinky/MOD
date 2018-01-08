@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:focus, *:hover {
+  outline: none; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #fff; }
+
+p {
+  margin: 0; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.hero {
+  position: relative;
+  background: url("../img/hero_grid.svg");
+  background-size: 100%; }
+  .hero__image {
+    position: relative;
+    margin-top: -3.8em;
+    width: 100%;
+    z-index: -10; }
+  .hero__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    font: 300 1.4em/2.85714em "Raleway", sans-serif;
+    background-color: #1a1a1a;
+    opacity: 0.9;
+    text-align: center; }
+
+.logo {
+  width: 4.325em;
+  height: 1.325em; }
+
+.nav__logo {
+  margin-left: 4.6em; }
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1.2em 0;
+  background-color: #1a1a1a; }
+  .nav__list {
+    margin: 0 6.75em 0 0;
+    padding: 0; }
+  .nav__item {
+    float: left;
+    margin-right: 2.4em; }
+    .nav__item:last-child {
+      margin-right: 0; }
+  .nav__link {
+    font-size: 1em; }
+
+.arrow {
+  background: url("../img/arrow.svg") no-repeat;
+  background-size: 100%; }
+
+.howItWorks {
+  padding: 0 1em; }
+  .howItWorks > h3 {
+    position: relative;
+    margin: 1em 0 0.61111em;
+    font-size: 1.8em;
+    text-align: center;
+    color: #1a1a1a; }
+  .howItWorks__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0.77778em;
+    height: 0.36111em;
+    cursor: pointer; }
+  .howItWorks > p {
+    margin-bottom: 1.63636em;
+    font-size: 1.1em;
+    text-align: center;
+    color: #1a1a1a; }
+  .howItWorks__item {
+    position: relative;
+    margin-bottom: 1.4em; }
+    .howItWorks__item img {
+      width: 100%; }
+  .howItWorks__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 23.6em;
+    padding: 0 2.25em 0 3.7em;
+    background-color: #1a1a1a;
+    opacity: 0.9; }
+    .howItWorks__info-right {
+      right: 0;
+      left: auto;
+      padding-right: 4.9em; }
+    .howItWorks__info h3 {
+      margin-bottom: 0.58333em;
+      font-size: 2.4em;
+      font-weight: normal;
+      letter-spacing: 0.02083em; }
+    .howItWorks__info p {
+      font-size: 1em;
+      line-height: 1.2em;
+      letter-spacing: 0.025em; }
+
+/* Adaptive */
+@media screen and (min-width: 1900px) {
+  body {
+    font-size: 26px; } }
+
+@media screen and (min-width: 1601px) and (max-width: 1899px) {
+  body {
+    font-size: 22px; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 17px; } }
+
+@media screen and (max-width: 767px) {
+  .howItWorks > h3 {
+    margin-bottom: 0.83333em; } }
+
+@media screen and (min-width: 565px) and (max-width: 767px) {
+  body {
+    font-size: 15px; } }
+
+@media screen and (max-width: 564px) {
+  body {
+    font-size: 13px; }
+  .hero__title {
+    font-size: 13px;
+    line-height: 20px; }
+  .nav {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .nav__logo {
+      margin-left: 0; }
+    .nav__list {
+      margin-right: 0; }
+  .howItWorks__info {
+    bottom: 0;
+    padding: 0 10px; }
+    .howItWorks__info h3 {
+      font-size: 25px; }
+  .howItWorks > p {
+    margin-top: 25px; } }
